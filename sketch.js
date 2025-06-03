@@ -61,9 +61,10 @@ class Particle {
   }
 
   display(r, g, b, fogDensity = 1) {
-    fill(r, g, b, this.alpha);
-    let dynamicSize = this.baseSize * fogDensity;
-    ellipse(this.x, this.y, dynamicSize);
+  noStroke();  // ← 追加！
+  fill(r, g, b, this.alpha);
+  let dynamicSize = this.baseSize * fogDensity;
+  ellipse(this.x, this.y, dynamicSize);
   }
 }
 
