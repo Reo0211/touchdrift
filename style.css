@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #3d3d3d;
+  overflow: hidden;
+}
+canvas {
+  display: block;
+}
+.custom-file-upload {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #1db954;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #1db954;
+  transition: background 0.3s ease;
+}
+
+.custom-file-upload:hover {
+  background-color: #17a44f;
+}
+
+.player-btn {
+  font-size: 1.5rem;
+  border: none;
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 8px #888;
+  transition: background 0.3s ease;
+}
+
+.player-btn:hover {
+  background: #555;
+}
+
+.seek-bar {
+  -webkit-appearance: none;
+  width: 300px;
+  height: 8px;
+  background: #444;
+  border-radius: 4px;
+  outline: none;
+  margin-top: 5px;
+}
+
+.seek-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #1db954;
+  cursor: pointer;
+}

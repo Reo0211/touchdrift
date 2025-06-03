@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>TouchDrift</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.sound.min.js"></script>
+  </head>
+  <body>
+    <main></main>
+
+    <div style="position: absolute; top: 10px; right: 10px;">
+      <button onclick="loadSketch('sketch.js')">sketch 1</button>
+      <button onclick="loadSketch('sketch2.js')">sketch 2</button>
+      <button onclick="loadSketch('sketch3.js')">sketch 3</button>
+    </div>
+
+    <script>
+      function loadSketch(filename) {
+        // クエリパラメータでファイル名を指定してリロード
+        window.location.search = "?sketch=" + filename;
+      }
+
+      // 現在のURLからスケッチ名を取得して読み込む
+      const params = new URLSearchParams(window.location.search);
+      const sketchFile = params.get("sketch") || "sketch.js";
+
+      const script = document.createElement("script");
+      script.src = sketchFile;
+      document.body.appendChild(script);
+    </script>
+  </body>
+</html>
